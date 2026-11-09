@@ -1,0 +1,39 @@
+{
+  "brand": "Djamoe Damar",
+  "pemilik": "Mama Damar",
+  "jenis": "Jamu tradisional dalam kemasan",
+  "kota": "Cikupa, Tangerang",
+  "deskripsi": "Jamu botolan 250 ml dari Talaga, Cikupa. Sebelas varian, Rp10.000 per botol, dibuat dari bahan yang dibeli pagi di pasar induk.",
+  "sejak": 2019,
+  "wa": "6283890790145",
+  "wa_pesan": "Halo Djamoe Damar, saya mau pesan jamu. Boleh info stok hari ini?",
+  "alamat": "Jl. Pattimura K3 No.17, Talaga, Cikupa, Tangerang Regency, Banten 15560",
+  "alamat_pendek": "Talaga, Cikupa",
+  "maps": "https://maps.app.goo.gl/UbV8anJ8Fz34RNga9",
+  "instagram": "https://www.instagram.com/djamoe.damar",
+  "handle": "@djamoe.damar",
+  "jam": "Setiap hari, 06.00 sampai 20.00",
+  "harga": 10000,
+  "isi": "250 ml",
+  "halal": "Halal Indonesia",
+  "halal_nomor": "ID36110017000600324",
+  "halal_terbit": "27 April 2024",
+  "merek": "IDM001479970",
+  "merek_terbit": "12 Desember 2025",
+  "bayar": [
+    {
+      "nama": "DANA",
+      "nomor": "0838 9079 0145",
+      "atas_nama": "Mukilah Damar"
+    },
+    {
+      "nama": "GoPay",
+      "nomor": "0838 9079 0145",
+      "atas_nama": "Mukilah Damar"
+    }
+  ],
+  "qris": true,
+  "url": "",
+  "alamat_1": "Jl. Pattimura K3 No.17, Talaga, Cikupa",
+  "alamat_2": "Tangerang Regency, Banten 15560"
+}
