@@ -772,7 +772,7 @@ def halaman_tentang(sertifikat):
   <div class="wrap tentang__isi">
     <div class="tentang__teks">
       <p class="label" data-nomor="02">Cara kerja</p>
-      <h2>Dibuat segar, botol kecil, pesanan harian.</h2>
+      <h2>Dibuat segar, praktis dalam botol, pesanan harian.</h2>
       <p>Jamu diracik setelah pesanan masuk. Setelah dimasak, jamu dibotolkan dan disegel, lalu disiapkan untuk diambil atau dikirim. Pelanggan bisa mengambil di kios atau meminta dikirim lewat ojek online.</p>
       <p>Karena dibuat sesuai pesanan, waktu siap bisa berbeda tergantung jumlah pesanan. Konfirmasi lewat WhatsApp sebelum datang ke kios.</p>
       <ul class="tentang__fakta">
