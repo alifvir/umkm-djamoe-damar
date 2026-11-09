@@ -2,12 +2,12 @@
   "brand": "Djamoe Damar",
   "pemilik": "Mama Damar",
   "jenis": "Jamu tradisional dalam kemasan",
-  "kota": "Talaga Bestari, Tangerang",
-  "deskripsi": "Jamu botolan 250 ml dari Talaga Bestari. 13 varian, Rp10.000 per botol, dibuat segar setelah pesanan masuk.",
+  "kota": "Talaga, Tangerang",
+  "deskripsi": "Jamu botolan 250 ml dari Talaga, Tangerang. 13 varian, Rp10.000 per botol, dibuat segar setelah pesanan masuk.",
   "sejak": 2019,
   "wa": "6283890790145",
   "wa_pesan": "Halo Djamoe Damar, saya mau pesan jamu. Boleh info varian dan waktu siapnya?",
-  "alamat": "Perum Talaga Bestari Blok K-3/17, Desa Wanakerta, Kec. Sindang Jaya, Kabupaten Tangerang, Banten 15560",
+  "alamat": "Jl. Pattimura K3 No.17, Talaga, Cikupa, Tangerang Regency, Banten 15560",
   "alamat_pendek": "Talaga Bestari",
   "maps": "https://maps.app.goo.gl/UbV8anJ8Fz34RNga9",
   "instagram": "https://www.instagram.com/djamoe.damar",
@@ -34,6 +34,6 @@
   ],
   "qris": true,
   "url": "https://djamoe-damar.pages.dev",
-  "alamat_1": "Perum Talaga Bestari Blok K-3/17, Wanakerta",
-  "alamat_2": "Sindang Jaya, Kabupaten Tangerang 15560"
+  "alamat_1": "Jl. Pattimura K3 No.17, Talaga",
+  "alamat_2": "Cikupa, Tangerang Regency, Banten 15560"
 }

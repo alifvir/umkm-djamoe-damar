@@ -71,9 +71,9 @@ VARIAN = [
         "foto": "susu-jahe.jpeg",
     },
     {
-        "nama": "Menjakani",
-        "slug": "menjakani",
-        "catatan": "Racikan menjakani khas Mama Damar.",
+        "nama": "Manjakani",
+        "slug": "manjakani",
+        "catatan": "Racikan manjakani khas Mama Damar.",
         "bahan": "",
         "manfaat": "",
         "foto": "",
@@ -172,8 +172,8 @@ TESTIMONI_FOTO = [
         "berkas": "testimoni-4.jpeg",
         "potong": (0, 415, 720, 1075),
         "kutipan": "Aku juga abis Manjakani, enak bgt.",
-        "catatan": "Menjakani, katanya enak banget",
-        "alt": "Tangkapan layar chat pelanggan yang menyebut jamu Menjakani enak",
+        "catatan": "Manjakani, katanya enak banget",
+        "alt": "Tangkapan layar chat pelanggan yang menyebut jamu Manjakani enak",
     },
 ]
 
@@ -374,7 +374,7 @@ def kepala(judul, deskripsi, aktif, kanonikal=""):
                      "address": {
                          "@type": "PostalAddress",
                          "streetAddress": SITE["alamat"],
-                         "addressLocality": "Sindang Jaya",
+                         "addressLocality": "Cikupa",
                          "addressRegion": "Banten",
                          "postalCode": "15560",
                          "addressCountry": "ID",
