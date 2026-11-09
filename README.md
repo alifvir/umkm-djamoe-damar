@@ -40,17 +40,25 @@ Buka `http://127.0.0.1:8100`.
 ## Ubah harga atau varian
 
 - Harga per botol: `harga` di `data/site.json`. Semua halaman membaca angka ini.
-- Nama, catatan rasa, komposisi, dan foto tiap varian: list `VARIAN` di `build.py`.
+- Nama, catatan rasa, komposisi, manfaat, dan foto tiap varian: list `VARIAN` di `build.py`.
 - Foto baru: taruh JPEG di `assets-src/`, isi `foto` pada varian dengan nama berkasnya, lalu build ulang.
 - Varian tanpa foto tetap tampil di halaman menu tanpa gambar.
+- Manfaat: isi kolom `manfaat` pada varian. Kalau kosong, baris manfaat tidak dirender. Saat ini semua masih kosong, menunggu daftar dari pemilik.
 
 ## Yang perlu dikonfirmasi pemilik
 
 1. Harga. Saat ini semua varian diisi Rp10.000 per botol 250 ml mengikuti contoh di `format product.txt`. Kalau ada varian yang beda harga, angka di `data/site.json` perlu dipecah per varian.
-2. Alamat. Situs memakai `Jl. Pattimura K3 No.17, Talaga, Cikupa` dari format. Sertifikat merek dan halal menyebut `Perum Talaga Bestari Blok K-3/17`, jadi pastikan mana yang dipakai untuk pengambilan.
-3. Halal. Sertifikat ID36110017000600324 mencantumkan 10 produk. Susut Perut dan Manjakani belum ada di lampiran. Kalau keduanya sudah tercakup di sertifikat terbaru, kirim berkasnya supaya lampiran ikut diperbarui.
-4. Foto Empon-Empon, Sirih, dan Manjakani belum ada. Halaman menu menyebut tiga varian ini belum difoto.
-5. Testimoni memakai 4 tangkapan layar chat yang diberikan. Nama dan nomor kontak sudah dipotong. Sertifikat yang ditampilkan di `/tentang/#legalitas` memuat alamat pemilik, beri tahu kalau bagian itu perlu disamarkan.
+2. Alamat. Situs memakai `Perum Talaga Bestari Blok K-3/17, Wanakerta, Sindang Jaya`, sesuai sertifikat. Pastikan ini alamat pengambilan yang benar.
+3. Halal. Sertifikat ID36110017000600324 mencantumkan 10 produk. Dari 13 varian di situs, Menjakani, Susut Perut, Gulas, dan Semerai belum ada di lampiran. Kunyit Asem Majakane ada di lampiran tetapi tidak dijual di situs. Kalau ada sertifikat terbaru, kirim berkasnya.
+4. Foto Menjakani, Empon-Empon, Sirih, Gulas, dan Semerai belum ada. Halaman menu menyebut 5 varian ini belum difoto. Pemilik akan menyusulkan foto.
+5. Manfaat tiap varian belum diisi. Struktur dan tampilannya sudah siap, tinggal kirim daftar manfaat.
+6. Testimoni memakai 4 tangkapan layar chat yang diberikan. Nama dan nomor kontak sudah dipotong. Sertifikat yang ditampilkan di `/tentang/#legalitas` memuat alamat pemilik, beri tahu kalau bagian itu perlu disamarkan.
+
+## Status
+
+Live: https://djamoe-damar.pages.dev
+Repo: https://github.com/alifvir/umkm-djamoe-damar
+Cloudflare Pages terhubung ke repo, build otomatis setiap push ke `main`.
 
 ## Deploy
 

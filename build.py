@@ -35,6 +35,7 @@ VARIAN = [
         "slug": "kunyit-asem",
         "catatan": "Asam segar, manisnya pas.",
         "bahan": "Kunyit, gula merah, asam jawa, garam, sereh, jeruk nipis.",
+        "manfaat": "",
         "foto": "kunyit-asem.jpeg",
     },
     {
@@ -42,55 +43,71 @@ VARIAN = [
         "slug": "beras-kencur",
         "catatan": "Rasa kencur yang lembut dan sedikit manis.",
         "bahan": "",
+        "manfaat": "",
         "foto": "beras-kencur.jpeg",
-    },
-    {
-        "nama": "Wedang Jahe",
-        "slug": "wedang-jahe",
-        "catatan": "Jahe emprit, hangat, beraroma sereh dan pandan.",
-        "bahan": "Jahe emprit, gula merah, sereh, daun pandan, daun jeruk, jeruk nipis.",
-        "foto": "wedang-jahe.jpeg",
-    },
-    {
-        "nama": "Temulawak",
-        "slug": "temulawak",
-        "catatan": "Temulawak segar, sedikit pahit di akhir.",
-        "bahan": "",
-        "foto": "temulawak.jpeg",
     },
     {
         "nama": "Kunyit Tawar",
         "slug": "kunyit-tawar",
         "catatan": "Tanpa gula, untuk yang tidak suka manis.",
         "bahan": "",
+        "manfaat": "",
         "foto": "kunyit-tawar.jpeg",
+    },
+    {
+        "nama": "Wedang Jahe",
+        "slug": "wedang-jahe",
+        "catatan": "Jahe emprit, hangat, beraroma sereh dan pandan.",
+        "bahan": "Jahe emprit, gula merah, sereh, daun pandan, daun jeruk, jeruk nipis.",
+        "manfaat": "",
+        "foto": "wedang-jahe.jpeg",
     },
     {
         "nama": "Susu Jahe",
         "slug": "susu-jahe",
         "catatan": "Jahe dengan susu, lebih lembut di tenggorokan.",
         "bahan": "",
+        "manfaat": "",
         "foto": "susu-jahe.jpeg",
     },
     {
-        "nama": "Pahitan",
-        "slug": "pahitan",
-        "catatan": "Pahitnya khas, diminum sedikit demi sedikit.",
+        "nama": "Menjakani",
+        "slug": "menjakani",
+        "catatan": "Racikan menjakani khas Mama Damar.",
         "bahan": "",
-        "foto": "pahitan.jpeg",
+        "manfaat": "",
+        "foto": "",
     },
     {
         "nama": "Susut Perut",
         "slug": "susut-perut",
         "catatan": "Racikan rempah khas Mama Damar.",
         "bahan": "",
+        "manfaat": "",
         "foto": "susut-perut.jpeg",
+    },
+    {
+        "nama": "Temulawak",
+        "slug": "temulawak",
+        "catatan": "Temulawak segar, sedikit pahit di akhir.",
+        "bahan": "",
+        "manfaat": "",
+        "foto": "temulawak.jpeg",
+    },
+    {
+        "nama": "Pahitan",
+        "slug": "pahitan",
+        "catatan": "Pahitnya khas, diminum sedikit demi sedikit.",
+        "bahan": "",
+        "manfaat": "",
+        "foto": "pahitan.jpeg",
     },
     {
         "nama": "Empon-Empon",
         "slug": "empon-empon",
         "catatan": "Campuran rempah, hangat dan beraroma lengkap.",
         "bahan": "",
+        "manfaat": "",
         "foto": "",
     },
     {
@@ -98,16 +115,36 @@ VARIAN = [
         "slug": "sirih",
         "catatan": "Aroma daun sirih, manis di akhir.",
         "bahan": "",
+        "manfaat": "",
         "foto": "",
     },
     {
-        "nama": "Manjakani",
-        "slug": "manjakani",
-        "catatan": "Racikan manjakani khas Mama Damar.",
+        "nama": "Gulas",
+        "slug": "gulas",
+        "catatan": "Racikan khas Mama Damar.",
         "bahan": "",
+        "manfaat": "",
+        "foto": "",
+    },
+    {
+        "nama": "Semerai",
+        "slug": "semerai",
+        "catatan": "Racikan khas Mama Damar.",
+        "bahan": "",
+        "manfaat": "",
         "foto": "",
     },
 ]
+
+JUMLAH_VARIAN = len(VARIAN)
+TANPA_FOTO = [v["nama"] for v in VARIAN if not v["foto"]]
+JUMLAH_TANPA_FOTO = len(TANPA_FOTO)
+
+
+def daftar_nama(nama):
+    if len(nama) <= 1:
+        return nama[0] if nama else ""
+    return ", ".join(nama[:-1]) + ", dan " + nama[-1]
 
 TESTIMONI_FOTO = [
     {
@@ -135,16 +172,16 @@ TESTIMONI_FOTO = [
         "berkas": "testimoni-4.jpeg",
         "potong": (0, 415, 720, 1075),
         "kutipan": "Aku juga abis Manjakani, enak bgt.",
-        "catatan": "Manjakani, katanya enak banget",
-        "alt": "Tangkapan layar chat pelanggan yang menyebut jamu Manjakani enak",
+        "catatan": "Menjakani, katanya enak banget",
+        "alt": "Tangkapan layar chat pelanggan yang menyebut jamu Menjakani enak",
     },
 ]
 
 KETENTUAN = [
-    ("Pesanan disiapkan setelah pembayaran", "Stok fresh juga tersedia setiap hari, jadi bisa langsung ambil di kios."),
+    ("Pesanan dibuat setelah pembayaran", "Jamu diracik setelah pesanan dan pembayaran dikonfirmasi."),
     ("Botol selalu tersegel", "Kalau segel rusak saat diterima, jangan diminum. Kabari kami lewat WhatsApp."),
     ("Pengiriman lewat ojek online", "Biaya kirim mengikuti jarak. Bisa juga ambil sendiri di kios."),
-    ("Varian bisa disesuaikan", "Sebutkan varian dan jumlahnya di WhatsApp, kami cek stok hari itu."),
+    ("Varian bisa disesuaikan", "Sebutkan varian dan jumlahnya di WhatsApp, kami balas total dan waktu siapnya."),
 ]
 
 
@@ -337,7 +374,7 @@ def kepala(judul, deskripsi, aktif, kanonikal=""):
                      "address": {
                          "@type": "PostalAddress",
                          "streetAddress": SITE["alamat"],
-                         "addressLocality": "Cikupa",
+                         "addressLocality": "Sindang Jaya",
                          "addressRegion": "Banten",
                          "postalCode": "15560",
                          "addressCountry": "ID",
@@ -374,7 +411,7 @@ def kepala(judul, deskripsi, aktif, kanonikal=""):
   <div class="wrap site-head__row">
     <a class="merek" href="/">
       <img src="/assets/img/logo.webp" alt="Logo Djamoe Damar" width="72" height="60" decoding="async">
-      <span class="merek__teks"><strong>Djamoe Damar</strong><small>Jamu botolan, Cikupa</small></span>
+      <span class="merek__teks"><strong>Djamoe Damar</strong><small>Jamu botolan, Talaga Bestari</small></span>
     </a>
     <button class="nav-tombol" type="button" data-nav-tombol aria-expanded="false" aria-controls="nav-utama">
       <span class="nav-tombol__garis" aria-hidden="true"></span> Menu
@@ -457,7 +494,7 @@ def kartu_varian(v, foto):
 
 
 def baris_harga(v):
-    pesan = ("Halo Djamoe Damar, saya mau pesan %s %s. Stok hari ini ada?"
+    pesan = ("Halo Djamoe Damar, saya mau pesan %s %s. Boleh info waktu siapnya?"
              % (v["nama"], ISI))
     return f"""<div class="baris" id="{v['slug']}">
   <span class="baris__nama">{escape(v['nama'])}</span>
@@ -489,21 +526,21 @@ def halaman_beranda(foto, testimoni):
 </figure>""" for t in testimoni
     )
     return kepala(
-        "Djamoe Damar, jamu botolan segar dari Cikupa",
-        "Sebelas varian jamu botolan 250 ml, Rp10.000 per botol. Diracik Mama Damar di Talaga, Cikupa. Ambil di kios atau kirim lewat ojek online.",
+        "Djamoe Damar, jamu botolan segar dari Talaga Bestari",
+        f"{JUMLAH_VARIAN} varian jamu botolan 250 ml, Rp10.000 per botol. Dibuat segar setelah pesanan masuk, diracik Mama Damar di Talaga Bestari. Ambil di kios atau kirim lewat ojek online.",
         "beranda",
         "/",
     ) + f"""
 <section class="hero">
   <div class="wrap hero__isi">
     <div class="hero__teks">
-      <h1>Jamu segar dari Cikupa, <span>botol 250 ml.</span></h1>
-      <p>Sebelas varian, {rupiah(HARGA)} per botol. Bahan dibeli pagi di pasar induk, diracik {escape(SITE["pemilik"])}, lalu disegel. Ambil di kios Talaga atau kirim lewat ojek online.</p>
+      <h1>Jamu segar dari Talaga Bestari, <span>botol 250 ml.</span></h1>
+      <p>{JUMLAH_VARIAN} varian, {rupiah(HARGA)} per botol. Dibuat segar setelah pesanan masuk, diracik {escape(SITE["pemilik"])}, lalu disegel. Ambil di kios Talaga Bestari atau kirim lewat ojek online.</p>
       <div class="hero__aksi">
         {tombol_order("tombol", "Pesan lewat WhatsApp")}
-        <a class="tombol tombol--outline" href="/menu/">Lihat 11 varian</a>
+        <a class="tombol tombol--outline" href="/menu/">Lihat {JUMLAH_VARIAN} varian</a>
       </div>
-      <p class="hero__kecil">Balasan mengikuti jam buka. {escape(SITE["jam"])}.</p>
+      <p class="hero__kecil">Pesanan dibuat setelah pembayaran dikonfirmasi. Balasan mengikuti jam buka. {escape(SITE["jam"])}.</p>
     </div>
     <figure class="hero__foto">
       <img src="/assets/img/hero.webp" alt="Botol jamu kunyit asem Djamoe Damar 250 ml dipegang di pinggir jalan" width="860" height="1147" fetchpriority="high" decoding="async">
@@ -519,7 +556,7 @@ def halaman_beranda(foto, testimoni):
   <ul class="fakta">
     <li><strong>Halal Indonesia</strong><span>Sertifikat No. {escape(SITE["halal_nomor"])}, terbit {escape(SITE["halal_terbit"])}.</span></li>
     <li><strong>Merek terdaftar</strong><span>No. {escape(SITE["merek"])}, terdaftar di DJKI sejak Desember 2025.</span></li>
-    <li><strong>Sejak {SITE["sejak"]}</strong><span>Melayani pesanan jamu botolan di Talaga, Cikupa.</span></li>
+    <li><strong>Sejak {SITE["sejak"]}</strong><span>Melayani pesanan jamu botolan di Talaga Bestari.</span></li>
   </ul>
 </div>
 
@@ -528,23 +565,23 @@ def halaman_beranda(foto, testimoni):
     <div class="kepala-bagian">
       <div>
         <p class="label" data-nomor="01">Varian</p>
-        <h2>Satu harga, sebelas rasa.</h2>
+        <h2>Satu harga untuk semua varian.</h2>
       </div>
       <p class="kepala-bagian__teks">Semua botol isi {ISI} dan dijual {rupiah(HARGA)}. Foto di bawah adalah botol yang benar-benar kami isi, bukan gambar contoh kemasan.</p>
     </div>
     <div class="varian-grid">{kartu}</div>
-    <p class="setelah-grid">Tiga varian lain, Empon-Empon, Sirih, dan Manjakani, ada di <a class="tautan" href="/menu/">daftar lengkap</a>.</p>
+    <p class="setelah-grid">Varian lain, {daftar_nama(TANPA_FOTO)}, ada di <a class="tautan" href="/menu/">daftar lengkap</a>.</p>
   </div>
 </section>
 
 <section class="pita">
   <div class="wrap pita__isi">
     <div>
-      <p class="label label--terang" data-nomor="02">Bahan dan proses</p>
-      <h2>Bahan dibeli pagi, botol disegel sebelum keluar kios.</h2>
-      <p class="pita__teks">Jamu diracik {escape(SITE["pemilik"])} di Talaga. Bahan utama dibeli di pasar induk setiap pagi, lalu dimasak dan dikemas dalam botol {ISI}. Stok fresh tersedia tiap hari, dan pesanan juga disiapkan setelah pembayaran dikonfirmasi.</p>
+      <p class="label label--terang" data-nomor="02">Proses</p>
+      <h2>Dibuat segar setiap hari, setelah pesanan masuk.</h2>
+      <p class="pita__teks">Jamu diracik {escape(SITE["pemilik"])} di Talaga Bestari. Tidak ada stok lama: pesanan baru dibuat setelah masuk dan dikonfirmasi, lalu dimasak, dibotolkan, dan disegel.</p>
       <dl class="pita__daftar">
-        <div><dt>Pasar induk, tiap pagi</dt><dd>Kunyit, jahe, kencur, dan temulawak dibeli segar untuk produksi hari itu.</dd></div>
+        <div><dt>Dibuat sesuai pesanan</dt><dd>Jamu baru diracik setelah pesanan dan pembayaran dikonfirmasi.</dd></div>
         <div><dt>Botol tersegel</dt><dd>Setiap botol ditutup rapat. Kalau segel rusak saat diterima, jangan diminum.</dd></div>
         <div><dt>Ambil atau diantar</dt><dd>Ambil di kios, atau kirim lewat ojek online dengan biaya sesuai jarak.</dd></div>
       </dl>
@@ -555,7 +592,7 @@ def halaman_beranda(foto, testimoni):
         <img src="/assets/img/beras-kencur.webp" alt="Botol beras kencur Djamoe Damar" width="720" height="960" loading="lazy" decoding="async">
         <img src="/assets/img/pahitan.webp" alt="Botol pahitan Djamoe Damar" width="720" height="960" loading="lazy" decoding="async">
       </div>
-      <figcaption>Kunyit Asem, Beras Kencur, dan Pahitan. Tiga dari sebelas varian.</figcaption>
+      <figcaption>Kunyit Asem, Beras Kencur, dan Pahitan. Tiga dari {JUMLAH_VARIAN} varian.</figcaption>
     </figure>
   </div>
 </section>
@@ -567,7 +604,7 @@ def halaman_beranda(foto, testimoni):
         <p class="label" data-nomor="03">Harga</p>
         <h2>Daftar lengkap, tanpa biaya tambahan.</h2>
       </div>
-      <p class="kepala-bagian__teks">Harga yang tertulis adalah harga per botol. Kirim pesan WhatsApp berisi varian dan jumlah, kami balas dengan total dan ketersediaan.</p>
+      <p class="kepala-bagian__teks">Harga yang tertulis adalah harga per botol. Kirim pesan WhatsApp berisi varian dan jumlah, kami balas total dan perkiraan waktu siapnya.</p>
     </div>
     <div class="tabel" role="table" aria-label="Daftar varian dan harga Djamoe Damar">
       <div class="tabel__kepala" role="row">
@@ -600,20 +637,20 @@ def halaman_beranda(foto, testimoni):
     <div class="alur__kiri">
       <p class="label" data-nomor="05">Cara pesan</p>
       <h2>Tiga langkah, lewat WhatsApp.</h2>
-      <p>Tidak perlu aplikasi baru atau akun. Semua pesanan dicatat dari chat, lalu disiapkan sesuai urutan pembayaran.</p>
+      <p>Tidak perlu aplikasi baru atau akun. Semua pesanan dicatat dari chat, lalu dibuat setelah pembayaran dikonfirmasi.</p>
       <p class="alur__catatan">Bayar dengan {", ".join(b["nama"] for b in SITE["bayar"])}, atau QRIS. Kirim bukti transfer lewat chat.</p>
     </div>
     <ol class="langkah">
       <li>
         <div>
-          <h3>Tanya stok</h3>
-          <p>Chat WhatsApp, sebutkan varian dan jumlah botol. Kami balas ketersediaan hari itu dan totalnya.</p>
+          <h3>Tanya varian</h3>
+          <p>Chat WhatsApp, sebutkan varian dan jumlah botol. Kami balas total dan perkiraan waktu siapnya.</p>
         </div>
       </li>
       <li>
         <div>
           <h3>Konfirmasi dan bayar</h3>
-          <p>Transfer DANA atau GoPay, atau pindai QRIS. Pesanan disiapkan setelah pembayaran dikonfirmasi.</p>
+          <p>Transfer DANA atau GoPay, atau pindai QRIS. Pesanan mulai dibuat setelah pembayaran dikonfirmasi.</p>
         </div>
       </li>
       <li>
@@ -630,17 +667,17 @@ def halaman_beranda(foto, testimoni):
   <div class="wrap lokasi__isi">
     <div>
       <p class="label" data-nomor="06">Lokasi dan jam buka</p>
-      <h2>Kios di Talaga, buka setiap hari.</h2>
+      <h2>Kios di Talaga Bestari, buka setiap hari.</h2>
       <address>{alamat_html()}</address>
       <p class="lokasi__jam">{escape(SITE["jam"])}.</p>
       <div class="hero__aksi">
         <a class="tombol tombol--outline" href="{escape(SITE["maps"])}">Buka Google Maps</a>
-        {tombol_order("tautan", "Tanya stok lewat WhatsApp")}
+        {tombol_order("tautan", "Tanya varian lewat WhatsApp")}
       </div>
     </div>
     <div class="lokasi__panel">
-      <h3>Sebelum berangkat</h3>
-      <p>Kabari dulu varian yang dicari lewat WhatsApp. Kalau varian itu habis, kami bisa siapkan untuk pengambilan berikutnya.</p>
+      <h3>Sebelum pesan</h3>
+      <p>Kabari varian yang dicari lewat WhatsApp. Karena dibuat sesuai pesanan, waktu siap kami informasikan lewat chat.</p>
       <p class="teks-kecil">Alamat lengkap dan info pembayaran ada di <a class="tautan" href="/kontak/">halaman kontak</a>.</p>
     </div>
   </div>
@@ -660,13 +697,15 @@ def halaman_menu(foto):
         else:
             kelas = "varian varian--teks"
         bahan = ('<span class="baris__bahan">%s</span>' % escape(v["bahan"])) if v["bahan"] else ""
-        pesan = "Halo Djamoe Damar, saya mau pesan %s %s. Stok hari ini ada?" % (v["nama"], ISI)
+        manfaat = ('<span class="varian__manfaat"><b>Manfaat</b> %s</span>' % escape(v["manfaat"])) if v.get("manfaat") else ""
+        pesan = "Halo Djamoe Damar, saya mau pesan %s %s. Boleh info waktu siapnya?" % (v["nama"], ISI)
         baris.append(f"""<article class="{kelas}" id="{v['slug']}">
   {thumb}
   <div class="varian__isi">
     <h3>{escape(v['nama'])}</h3>
     <p>{escape(v['catatan'])}</p>
     {bahan}
+    {manfaat}
   </div>
   <div class="varian__beli">
     <strong>{rupiah(HARGA)}</strong>
@@ -676,15 +715,15 @@ def halaman_menu(foto):
 </article>""")
     return kepala(
         "Varian dan harga jamu, Djamoe Damar",
-        "Daftar sebelas varian jamu Djamoe Damar, Rp10.000 per botol 250 ml. Kunyit asem, beras kencur, wedang jahe, temulawak, dan lainnya.",
+        f"Daftar {JUMLAH_VARIAN} varian jamu Djamoe Damar, Rp10.000 per botol 250 ml. Kunyit asem, beras kencur, wedang jahe, temulawak, dan lainnya.",
         "varian",
         "/menu/",
     ) + f"""
 <div class="page-head">
   <div class="wrap">
     <p class="label" data-nomor="01">Varian dan harga</p>
-    <h1>Sebelas varian, {rupiah(HARGA)} per botol.</h1>
-    <p>Semua botol isi {ISI} dan selalu tersegel. Pilih varian, lalu chat WhatsApp untuk cek stok hari ini. Tiga varian belum sempat difoto, tapi tetap tersedia.</p>
+    <h1>{JUMLAH_VARIAN} varian, {rupiah(HARGA)} per botol.</h1>
+    <p>Semua botol isi {ISI}. Pesanan dibuat setelah pembayaran dikonfirmasi, waktu siap diinformasikan lewat WhatsApp. {JUMLAH_TANPA_FOTO} varian belum ada fotonya, tapi tetap tersedia.</p>
   </div>
 </div>
 <section class="bagian-varian">
@@ -698,14 +737,14 @@ def halaman_menu(foto):
   <div class="wrap alur__isi">
     <div class="alur__kiri">
       <p class="label" data-nomor="02">Cara pesan</p>
-      <h2>Stok, bayar, lalu ambil atau kirim.</h2>
-      <p>Pesanan disiapkan setelah pembayaran dikonfirmasi. Bisa bayar dengan {", ".join(b["nama"] for b in SITE["bayar"])} atau QRIS.</p>
-      <p class="alur__catatan">Stok fresh juga tersedia setiap hari untuk pembelian langsung di kios.</p>
+      <h2>Pilih, bayar, lalu tunggu pesanan dibuat.</h2>
+      <p>Pesanan dibuat setelah pembayaran dikonfirmasi. Bisa bayar dengan {", ".join(b["nama"] for b in SITE["bayar"])} atau QRIS.</p>
+      <p class="alur__catatan">Waktu siap tergantung jumlah pesanan. Kami kabari lewat WhatsApp.</p>
     </div>
     <ol class="langkah">
-      <li><div><h3>Tanya stok</h3><p>Sebutkan varian dan jumlah botol lewat WhatsApp.</p></div></li>
-      <li><div><h3>Bayar</h3><p>Transfer atau QRIS, lalu kirim bukti pembayaran.</p></div></li>
-      <li><div><h3>Ambil atau kirim</h3><p>Ambil di kios Talaga, atau kirim lewat ojek online.</p></div></li>
+      <li><div><h3>Pilih varian</h3><p>Sebutkan varian dan jumlah botol lewat WhatsApp. Kami balas total dan waktu siapnya.</p></div></li>
+      <li><div><h3>Bayar</h3><p>Transfer atau QRIS, lalu kirim bukti. Pesanan mulai dibuat setelah pembayaran masuk.</p></div></li>
+      <li><div><h3>Ambil atau kirim</h3><p>Ambil di kios Talaga Bestari, atau kirim lewat ojek online.</p></div></li>
     </ol>
   </div>
 </section>
@@ -718,14 +757,14 @@ def halaman_tentang(sertifikat):
     merek = sertifikat["merek"]
     return kepala(
         "Tentang Djamoe Damar",
-        "Djamoe Damar adalah usaha jamu botolan Mama Damar di Talaga, Cikupa. Sejak 2019, bersertifikat halal, dan merek terdaftar.",
+        "Djamoe Damar adalah usaha jamu botolan Mama Damar di Talaga Bestari. Sejak 2019, bersertifikat halal, dan merek terdaftar.",
         "tentang",
         "/tentang/",
     ) + f"""
 <div class="page-head">
   <div class="wrap">
     <p class="label" data-nomor="01">Tentang</p>
-    <h1>Jamu rumahan dari Talaga, sejak {SITE["sejak"]}.</h1>
+    <h1>Jamu rumahan dari Talaga Bestari, sejak {SITE["sejak"]}.</h1>
     <p>Djamoe Damar adalah usaha jamu botolan {escape(SITE["pemilik"])} di {escape(SITE["alamat_pendek"])}. Jamu diracik dari bahan segar, dikemas dalam botol {ISI}, lalu dijual langsung ke pelanggan di sekitar Tangerang.</p>
   </div>
 </div>
@@ -733,9 +772,9 @@ def halaman_tentang(sertifikat):
   <div class="wrap tentang__isi">
     <div class="tentang__teks">
       <p class="label" data-nomor="02">Cara kerja</p>
-      <h2>Bahan segar, botol kecil, pesanan harian.</h2>
-      <p>Bahan utama dibeli pagi di pasar induk. Setelah dimasak, jamu langsung dibotolkan dan disegel, lalu disiapkan untuk pesanan hari itu. Pelanggan bisa mengambil di kios atau meminta dikirim lewat ojek online.</p>
-      <p>Karena produksinya harian, varian yang tersedia bisa berbeda tiap hari. Sebaiknya tanyakan stok lewat WhatsApp sebelum berangkat ke kios.</p>
+      <h2>Dibuat segar, botol kecil, pesanan harian.</h2>
+      <p>Jamu diracik setelah pesanan masuk. Setelah dimasak, jamu dibotolkan dan disegel, lalu disiapkan untuk diambil atau dikirim. Pelanggan bisa mengambil di kios atau meminta dikirim lewat ojek online.</p>
+      <p>Karena dibuat sesuai pesanan, waktu siap bisa berbeda tergantung jumlah pesanan. Konfirmasi lewat WhatsApp sebelum datang ke kios.</p>
       <ul class="tentang__fakta">
         <li><strong>Halal Indonesia</strong><span>Sertifikat No. {escape(SITE["halal_nomor"])}, terbit {escape(SITE["halal_terbit"])}.</span></li>
         <li><strong>Merek terdaftar</strong><span>No. {escape(SITE["merek"])}, berlaku 10 tahun sejak {escape(SITE["merek_terbit"])}.</span></li>
@@ -787,7 +826,7 @@ def halaman_tentang(sertifikat):
       <ul class="daftar-ketentuan">{blok_ketentuan()}</ul>
     </div>
     <div class="pita__aksi">
-      <p>Mau tanya varian atau stok hari ini?</p>
+      <p>Mau tanya varian atau waktu siapnya?</p>
       {tombol_order("tombol tombol--terang", "Chat WhatsApp")}
       <p class="teks-kecil">Jam buka {escape(SITE["jam"]).lower()}.</p>
     </div>
@@ -802,7 +841,7 @@ def halaman_kontak():
     <div class="kartu-info kartu-info--wa">
       <h2>WhatsApp</h2>
       <p class="kontak-nomor">{escape(nomor_tampil())}</p>
-      <p>Tanya stok, pesan varian, atau kirim bukti transfer. Sebutkan varian dan jumlah botol supaya balasannya langsung berisi total.</p>
+      <p>Tanya varian, pesan, atau kirim bukti transfer. Sebutkan varian dan jumlah botol supaya balasannya langsung berisi total.</p>
       <p class="teks-kecil">Balasan mengikuti jam buka. Kalau sedang memasak atau mengantar pesanan, balasan bisa agak lambat.</p>
       <p><a class="tombol" href="{escape(tautan)}" target="_blank" rel="noopener">Chat lewat WhatsApp</a></p>
     </div>""" if tautan else """
@@ -830,7 +869,7 @@ def halaman_kontak():
 
     return kepala(
         "Kontak dan pembayaran, Djamoe Damar",
-        "Nomor WhatsApp, alamat kios, jam buka, pembayaran DANA, GoPay, dan QRIS Djamoe Damar di Talaga, Cikupa.",
+        "Nomor WhatsApp, alamat kios, jam buka, pembayaran DANA, GoPay, dan QRIS Djamoe Damar di Talaga Bestari.",
         "kontak",
         "/kontak/",
     ) + f"""

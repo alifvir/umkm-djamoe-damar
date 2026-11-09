@@ -952,6 +952,20 @@ section {
   max-width: 52ch;
 }
 
+.varian__manfaat {
+  display: block;
+  margin-top: 7px;
+  font-size: 0.86rem;
+  color: var(--ink);
+  max-width: 54ch;
+}
+
+.varian__manfaat b {
+  color: var(--green);
+  font-weight: 600;
+  margin-right: 3px;
+}
+
 .varian__beli {
   grid-column: 1 / -1;
   display: flex;
