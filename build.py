@@ -29,13 +29,20 @@ ISI = SITE["isi"]
 
 # Varian yang dijual. Urutan tampil mengikuti urutan di daftar harga.
 # bahan hanya diisi kalau komposisinya terbaca di label botol.
+# manfaat berupa daftar butir; kalau kosong, baris manfaat tidak dirender.
 VARIAN = [
     {
         "nama": "Kunyit Asem",
         "slug": "kunyit-asem",
         "catatan": "Asam segar, manisnya pas.",
         "bahan": "Kunyit, gula merah, asam jawa, garam, sereh, jeruk nipis.",
-        "manfaat": "",
+        "manfaat": [
+            "Menurunkan kolesterol.",
+            "Sumber antioksidan.",
+            "Mengurangi risiko kanker.",
+            "Menjaga kesehatan kulit.",
+            "Mengurangi nyeri haid.",
+        ],
         "foto": "kunyit-asem.jpeg",
     },
     {
@@ -43,7 +50,11 @@ VARIAN = [
         "slug": "beras-kencur",
         "catatan": "Rasa kencur yang lembut dan sedikit manis.",
         "bahan": "",
-        "manfaat": "",
+        "manfaat": [
+            "Membantu menjaga daya tahan tubuh.",
+            "Membantu meredakan batuk, pilek, masuk angin, dan badan pegal.",
+            "Membantu pencernaan lebih nyaman.",
+        ],
         "foto": "beras-kencur.jpeg",
     },
     {
@@ -51,7 +62,7 @@ VARIAN = [
         "slug": "kunyit-tawar",
         "catatan": "Tanpa gula, untuk yang tidak suka manis.",
         "bahan": "",
-        "manfaat": "",
+        "manfaat": ["Meredakan mual, kembung, dan keluhan asam."],
         "foto": "kunyit-tawar.jpeg",
     },
     {
@@ -59,7 +70,11 @@ VARIAN = [
         "slug": "wedang-jahe",
         "catatan": "Jahe emprit, hangat, beraroma sereh dan pandan.",
         "bahan": "Jahe emprit, gula merah, sereh, daun pandan, daun jeruk, jeruk nipis.",
-        "manfaat": "",
+        "manfaat": [
+            "Memberi sensasi hangat.",
+            "Membantu meredakan mual.",
+            "Mengandung antioksidan.",
+        ],
         "foto": "wedang-jahe.jpeg",
     },
     {
@@ -67,7 +82,11 @@ VARIAN = [
         "slug": "susu-jahe",
         "catatan": "Jahe dengan susu, lebih lembut di tenggorokan.",
         "bahan": "",
-        "manfaat": "",
+        "manfaat": [
+            "Menghangatkan tubuh.",
+            "Menjaga kesehatan jantung.",
+            "Menjaga kesehatan tulang.",
+        ],
         "foto": "susu-jahe.jpeg",
     },
     {
@@ -75,7 +94,10 @@ VARIAN = [
         "slug": "manjakani",
         "catatan": "Racikan manjakani khas Mama Damar.",
         "bahan": "",
-        "manfaat": "",
+        "manfaat": [
+            "Membantu mengurangi masalah kewanitaan seperti keputihan dan bau tidak sedap.",
+            "Membantu mengencangkan area kewanitaan.",
+        ],
         "foto": "",
     },
     {
@@ -83,7 +105,11 @@ VARIAN = [
         "slug": "susut-perut",
         "catatan": "Racikan rempah khas Mama Damar.",
         "bahan": "",
-        "manfaat": "",
+        "manfaat": [
+            "Membantu melancarkan BAB.",
+            "Mengurangi lemak perut.",
+            "Membantu mengurangi nafsu makan.",
+        ],
         "foto": "susut-perut.jpeg",
     },
     {
@@ -91,7 +117,10 @@ VARIAN = [
         "slug": "temulawak",
         "catatan": "Temulawak segar, sedikit pahit di akhir.",
         "bahan": "",
-        "manfaat": "",
+        "manfaat": [
+            "Membantu menjaga kesehatan hati.",
+            "Menambah nafsu makan.",
+        ],
         "foto": "temulawak.jpeg",
     },
     {
@@ -99,7 +128,10 @@ VARIAN = [
         "slug": "pahitan",
         "catatan": "Pahitnya khas, diminum sedikit demi sedikit.",
         "bahan": "",
-        "manfaat": "",
+        "manfaat": [
+            "Membantu mengontrol gula darah dan kolesterol.",
+            "Membantu menjaga stamina.",
+        ],
         "foto": "pahitan.jpeg",
     },
     {
@@ -107,31 +139,47 @@ VARIAN = [
         "slug": "empon-empon",
         "catatan": "Campuran rempah, hangat dan beraroma lengkap.",
         "bahan": "",
-        "manfaat": "",
+        "manfaat": [
+            "Membantu gangguan lambung.",
+            "Membantu menjaga daya tahan tubuh.",
+            "Menghangatkan tubuh.",
+        ],
         "foto": "",
     },
     {
         "nama": "Sirih",
         "slug": "sirih",
-        "catatan": "Aroma daun sirih, manis di akhir.",
+        "catatan": "Tanpa manis, tinggal wangi aroma daun sirih.",
         "bahan": "",
-        "manfaat": "",
+        "manfaat": [
+            "Antibakteri.",
+            "Mengurangi bau badan.",
+            "Mendukung kesehatan organ kewanitaan.",
+        ],
         "foto": "",
     },
     {
         "nama": "Gulas",
         "slug": "gulas",
-        "catatan": "Racikan khas Mama Damar.",
+        "catatan": "Asam manis, diminum dingin lebih segar.",
         "bahan": "",
-        "manfaat": "",
+        "manfaat": [
+            "Menyegarkan tubuh.",
+            "Melancarkan pencernaan.",
+            "Membantu meredakan panas dalam.",
+        ],
         "foto": "",
     },
     {
         "nama": "Semerai",
         "slug": "semerai",
-        "catatan": "Racikan khas Mama Damar.",
+        "catatan": "Asam, manis, aroma sereh yang khas. Cocok diminum dingin.",
         "bahan": "",
-        "manfaat": "",
+        "manfaat": [
+            "Melancarkan pencernaan.",
+            "Menyegarkan tubuh.",
+            "Membantu melawan radikal bebas.",
+        ],
         "foto": "",
     },
 ]
@@ -697,7 +745,11 @@ def halaman_menu(foto):
         else:
             kelas = "varian varian--teks"
         bahan = ('<span class="baris__bahan">%s</span>' % escape(v["bahan"])) if v["bahan"] else ""
-        manfaat = ('<span class="varian__manfaat"><b>Manfaat</b> %s</span>' % escape(v["manfaat"])) if v.get("manfaat") else ""
+        if v.get("manfaat"):
+            butir = "".join("<li>%s</li>" % escape(m) for m in v["manfaat"])
+            manfaat = '<div class="varian__manfaat"><b>Manfaat</b><ul>%s</ul></div>' % butir
+        else:
+            manfaat = ""
         pesan = "Halo Djamoe Damar, saya mau pesan %s %s. Boleh info waktu siapnya?" % (v["nama"], ISI)
         baris.append(f"""<article class="{kelas}" id="{v['slug']}">
   {thumb}

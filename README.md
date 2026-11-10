@@ -43,15 +43,15 @@ Buka `http://127.0.0.1:8100`.
 - Nama, catatan rasa, komposisi, manfaat, dan foto tiap varian: list `VARIAN` di `build.py`.
 - Foto baru: taruh JPEG di `assets-src/`, isi `foto` pada varian dengan nama berkasnya, lalu build ulang.
 - Varian tanpa foto tetap tampil di halaman menu tanpa gambar.
-- Manfaat: isi kolom `manfaat` pada varian. Kalau kosong, baris manfaat tidak dirender. Saat ini semua masih kosong, menunggu daftar dari pemilik.
+- Manfaat: `manfaat` pada varian berupa daftar butir. Kalau daftarnya kosong, baris manfaat tidak dirender. Semua 13 varian sudah terisi.
 
 ## Yang perlu dikonfirmasi pemilik
 
-1. Harga. Saat ini semua varian diisi Rp10.000 per botol 250 ml mengikuti contoh di `format product.txt`. Kalau ada varian yang beda harga, angka di `data/site.json` perlu dipecah per varian.
+1. Harga. Sudah dikonfirmasi pemilik: Rp10.000 per botol 250 ml untuk semua varian.
 2. Alamat. Situs memakai alamat shareloc: `Jl. Pattimura K3 No.17, Talaga, Cikupa, Tangerang Regency, Banten 15560`. Nama area di judul tetap Talaga Bestari. Pastikan ini alamat pengambilan yang benar.
 3. Halal. Sertifikat ID36110017000600324 mencantumkan 10 produk. Dari 13 varian di situs, Manjakani, Susut Perut, Gulas, dan Semerai belum ada di lampiran. Kunyit Asem Majakane ada di lampiran tetapi tidak dijual di situs. Kalau ada sertifikat terbaru, kirim berkasnya.
 4. Foto Manjakani, Empon-Empon, Sirih, Gulas, dan Semerai belum ada. Halaman menu menyebut 5 varian ini belum difoto. Pemilik akan menyusulkan foto.
-5. Manfaat tiap varian belum diisi. Struktur dan tampilannya sudah siap, tinggal kirim daftar manfaat.
+5. Manfaat Kunyit Tawar: butir ketiga terpotong di daftar dari pemilik ("keluhan asam..."). Perlu satu kata terakhir, misalnya "asam lambung".
 6. Testimoni memakai 4 tangkapan layar chat yang diberikan. Nama dan nomor kontak sudah dipotong. Sertifikat yang ditampilkan di `/tentang/#legalitas` memuat alamat pemilik, beri tahu kalau bagian itu perlu disamarkan.
 
 ## Status

@@ -966,6 +966,29 @@ section {
   margin-right: 3px;
 }
 
+.varian__manfaat ul {
+  margin-top: 3px;
+  padding-left: 0;
+  list-style: none;
+  display: grid;
+  gap: 2px;
+}
+
+.varian__manfaat li {
+  position: relative;
+  padding-left: 0.95em;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.varian__manfaat li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--green);
+}
+
 .varian__beli {
   grid-column: 1 / -1;
   display: flex;
