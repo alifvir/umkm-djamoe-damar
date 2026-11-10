@@ -47,8 +47,8 @@ Buka `http://127.0.0.1:8100`.
 
 ## Yang perlu dikonfirmasi pemilik
 
-1. Komposisi Kunyit Tawar, Susu Jahe, dan Susut Perut belum ada dari pemilik, jadi baris "Komposisi" ketiganya tidak dirender.
-2. Rasa Susut Perut masih "Racikan rempah khas Mama Damar" dan Susu Jahe "Lebih lembut di tenggorokan", belum menggambarkan rasa. Perlu deskripsi dari pemilik.
+1. Tidak ada data varian yang masih kosong. Komposisi dan rasa 13 varian sudah terisi dari keterangan pemilik.
+2. Komposisi Susu Jahe ditulis "wedang jahe, susu kental manis" sesuai keterangan pemilik. Kalau mau diurai (jahe emprit, gula merah, susu kental manis, dan seterusnya), minta daftar bahannya.
 4. Foto pelanggan memegang 6 botol (sumber 11.43.36) belum dipasang karena wajah terlihat. Menunggu izin.
 5. Testimoni memakai 4 tangkapan layar chat. Nama dan nomor kontak sudah dipotong. Sertifikat di `/tentang/#legalitas` memuat alamat pemilik, beri tahu kalau perlu disamarkan.
 
