@@ -47,9 +47,8 @@ Buka `http://127.0.0.1:8100`.
 
 ## Yang perlu dikonfirmasi pemilik
 
-1. Foto Manjakani, Empon-Empon, Sirih, Gulas, dan Semerai belum ada. Pemilik akan menyusulkan.
-2. Komposisi 11 varian masih kosong, jadi baris "Komposisi" baru tampil di Kunyit Asem dan Wedang Jahe. Perlu daftar bahan dari pemilik.
-3. Catatan rasa Manjakani ("Racikan khas Mama Damar") dan Susut Perut ("Racikan rempah khas Mama Damar") belum menggambarkan rasa. Perlu deskripsi rasa dari pemilik.
+1. Komposisi Kunyit Tawar, Susu Jahe, dan Susut Perut belum ada dari pemilik, jadi baris "Komposisi" ketiganya tidak dirender.
+2. Rasa Susut Perut masih "Racikan rempah khas Mama Damar" dan Susu Jahe "Lebih lembut di tenggorokan", belum menggambarkan rasa. Perlu deskripsi dari pemilik.
 4. Foto pelanggan memegang 6 botol (sumber 11.43.36) belum dipasang karena wajah terlihat. Menunggu izin.
 5. Testimoni memakai 4 tangkapan layar chat. Nama dan nomor kontak sudah dipotong. Sertifikat di `/tentang/#legalitas` memuat alamat pemilik, beri tahu kalau perlu disamarkan.
 
