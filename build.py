@@ -35,7 +35,7 @@ VARIAN = [
         "nama": "Kunyit Asem",
         "slug": "kunyit-asem",
         "catatan": "Asam segar, manisnya pas.",
-        "bahan": "Kunyit, gula merah, asam jawa, garam, sereh, jeruk nipis.",
+        "bahan": "Kunyit segar, asam jawa, sereh, gula merah, garam, perasan jeruk nipis.",
         "manfaat": [
             "Menurunkan kolesterol.",
             "Sumber antioksidan.",
@@ -48,7 +48,7 @@ VARIAN = [
     {
         "nama": "Beras Kencur",
         "slug": "beras-kencur",
-        "catatan": "Rasa kencur yang lembut dan sedikit manis.",
+        "catatan": "Kencur yang lembut dan sedikit manis.",
         "bahan": "",
         "manfaat": [
             "Membantu menjaga daya tahan tubuh.",
@@ -62,13 +62,13 @@ VARIAN = [
         "slug": "kunyit-tawar",
         "catatan": "Tanpa gula, untuk yang tidak suka manis.",
         "bahan": "",
-        "manfaat": ["Meredakan mual, kembung, dan keluhan asam."],
+        "manfaat": ["Meredakan mual, kembung, dan keluhan asam lambung."],
         "foto": "kunyit-tawar.jpeg",
     },
     {
         "nama": "Wedang Jahe",
         "slug": "wedang-jahe",
-        "catatan": "Jahe emprit, hangat, beraroma sereh dan pandan.",
+        "catatan": "Hangat, beraroma sereh dan pandan.",
         "bahan": "Jahe emprit, gula merah, sereh, daun pandan, daun jeruk, jeruk nipis.",
         "manfaat": [
             "Memberi sensasi hangat.",
@@ -80,7 +80,7 @@ VARIAN = [
     {
         "nama": "Susu Jahe",
         "slug": "susu-jahe",
-        "catatan": "Jahe dengan susu, lebih lembut di tenggorokan.",
+        "catatan": "Lebih lembut di tenggorokan.",
         "bahan": "",
         "manfaat": [
             "Menghangatkan tubuh.",
@@ -92,7 +92,7 @@ VARIAN = [
     {
         "nama": "Manjakani",
         "slug": "manjakani",
-        "catatan": "Racikan manjakani khas Mama Damar.",
+        "catatan": "Racikan khas Mama Damar.",
         "bahan": "",
         "manfaat": [
             "Membantu mengurangi masalah kewanitaan seperti keputihan dan bau tidak sedap.",
@@ -115,7 +115,7 @@ VARIAN = [
     {
         "nama": "Temulawak",
         "slug": "temulawak",
-        "catatan": "Temulawak segar, sedikit pahit di akhir.",
+        "catatan": "Segar, sedikit pahit di akhir.",
         "bahan": "",
         "manfaat": [
             "Membantu menjaga kesehatan hati.",
@@ -744,10 +744,16 @@ def halaman_menu(foto):
                      % (f["berkas"], escape(v["nama"]), f["w"], f["h"]))
         else:
             kelas = "varian varian--teks"
-        bahan = ('<span class="baris__bahan">%s</span>' % escape(v["bahan"])) if v["bahan"] else ""
+        if v["bahan"]:
+            isi_bahan = v["bahan"][0].lower() + v["bahan"][1:]
+            bahan = ('<p class="varian__komposisi"><b class="varian__label">Komposisi</b> Dibuat dari %s</p>'
+                     % escape(isi_bahan))
+        else:
+            bahan = ""
         if v.get("manfaat"):
             butir = "".join("<li>%s</li>" % escape(m) for m in v["manfaat"])
-            manfaat = '<div class="varian__manfaat"><b>Manfaat</b><ul>%s</ul></div>' % butir
+            manfaat = ('<div class="varian__manfaat"><b class="varian__label">Manfaat</b><ul>%s</ul></div>'
+                       % butir)
         else:
             manfaat = ""
         pesan = "Halo Djamoe Damar, saya mau pesan %s %s. Boleh info waktu siapnya?" % (v["nama"], ISI)
@@ -755,7 +761,7 @@ def halaman_menu(foto):
   {thumb}
   <div class="varian__isi">
     <h3>{escape(v['nama'])}</h3>
-    <p>{escape(v['catatan'])}</p>
+    <p class="varian__rasa"><b class="varian__label">Rasa</b> {escape(v['catatan'])}</p>
     {bahan}
     {manfaat}
   </div>

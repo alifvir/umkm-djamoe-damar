@@ -939,17 +939,22 @@ section {
 }
 
 .varian__isi p {
-  margin-top: 4px;
-  font-size: 0.93rem;
+  margin-top: 5px;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--ink);
+  max-width: 56ch;
+}
+
+.varian__isi .varian__komposisi {
+  font-size: 0.8rem;
   color: var(--muted);
 }
 
-.baris__bahan {
-  display: block;
-  margin-top: 7px;
-  font-size: 0.8rem;
-  color: var(--muted);
-  max-width: 52ch;
+.varian__label {
+  color: var(--green);
+  font-weight: 600;
+  margin-right: 4px;
 }
 
 .varian__manfaat {
@@ -958,12 +963,6 @@ section {
   font-size: 0.86rem;
   color: var(--ink);
   max-width: 54ch;
-}
-
-.varian__manfaat b {
-  color: var(--green);
-  font-weight: 600;
-  margin-right: 3px;
 }
 
 .varian__manfaat ul {
