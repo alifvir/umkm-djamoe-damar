@@ -48,8 +48,8 @@ VARIAN = [
     {
         "nama": "Beras Kencur",
         "slug": "beras-kencur",
-        "catatan": "Kencur yang lembut dan sedikit manis.",
-        "bahan": "",
+        "catatan": "Manis, segar, lebih berasa kencur.",
+        "bahan": "Kencur, beras, biji adas, biji kedawung, daun pandan, daun jeruk, sereh, gula merah, garam.",
         "manfaat": [
             "Membantu menjaga daya tahan tubuh.",
             "Membantu meredakan batuk, pilek, masuk angin, dan badan pegal.",
@@ -68,8 +68,8 @@ VARIAN = [
     {
         "nama": "Wedang Jahe",
         "slug": "wedang-jahe",
-        "catatan": "Hangat, beraroma sereh dan pandan.",
-        "bahan": "Jahe emprit, gula merah, sereh, daun pandan, daun jeruk, jeruk nipis.",
+        "catatan": "Segar, manis, hangat ke badan.",
+        "bahan": "Jahe emprit, gula merah, daun pandan, daun jeruk, garam, sereh, perasan jeruk nipis.",
         "manfaat": [
             "Memberi sensasi hangat.",
             "Membantu meredakan mual.",
@@ -92,13 +92,13 @@ VARIAN = [
     {
         "nama": "Manjakani",
         "slug": "manjakani",
-        "catatan": "Racikan khas Mama Damar.",
-        "bahan": "",
+        "catatan": "Asam, manis, sepet.",
+        "bahan": "Kunyit, asam jawa, gula merah, garam, manjakani, daun sirih, pinang muda.",
         "manfaat": [
             "Membantu mengurangi masalah kewanitaan seperti keputihan dan bau tidak sedap.",
             "Membantu mengencangkan area kewanitaan.",
         ],
-        "foto": "",
+        "foto": "manjakani.jpeg",
     },
     {
         "nama": "Susut Perut",
@@ -115,8 +115,8 @@ VARIAN = [
     {
         "nama": "Temulawak",
         "slug": "temulawak",
-        "catatan": "Segar, sedikit pahit di akhir.",
-        "bahan": "",
+        "catatan": "Manis agak pahit.",
+        "bahan": "Temulawak.",
         "manfaat": [
             "Membantu menjaga kesehatan hati.",
             "Menambah nafsu makan.",
@@ -127,7 +127,7 @@ VARIAN = [
         "nama": "Pahitan",
         "slug": "pahitan",
         "catatan": "Pahitnya khas, diminum sedikit demi sedikit.",
-        "bahan": "",
+        "bahan": "Daun sambiloto, daun salam.",
         "manfaat": [
             "Membantu mengontrol gula darah dan kolesterol.",
             "Membantu menjaga stamina.",
@@ -137,50 +137,50 @@ VARIAN = [
     {
         "nama": "Empon-Empon",
         "slug": "empon-empon",
-        "catatan": "Campuran rempah, hangat dan beraroma lengkap.",
-        "bahan": "",
+        "catatan": "Manis, campuran dari empon-empon.",
+        "bahan": "Kunyit, jahe, sereh, kayu manis, temulawak.",
         "manfaat": [
             "Membantu gangguan lambung.",
             "Membantu menjaga daya tahan tubuh.",
             "Menghangatkan tubuh.",
         ],
-        "foto": "",
+        "foto": "empon-empon.jpeg",
     },
     {
         "nama": "Sirih",
         "slug": "sirih",
-        "catatan": "Tanpa manis, tinggal wangi aroma daun sirih.",
-        "bahan": "",
+        "catatan": "Tanpa manis, wangi aromanya.",
+        "bahan": "Daun sirih.",
         "manfaat": [
             "Antibakteri.",
             "Mengurangi bau badan.",
             "Mendukung kesehatan organ kewanitaan.",
         ],
-        "foto": "",
+        "foto": "sirih.jpeg",
     },
     {
         "nama": "Gulas",
         "slug": "gulas",
         "catatan": "Asam manis, diminum dingin lebih segar.",
-        "bahan": "",
+        "bahan": "Gula, asam jawa, garam.",
         "manfaat": [
             "Menyegarkan tubuh.",
             "Melancarkan pencernaan.",
             "Membantu meredakan panas dalam.",
         ],
-        "foto": "",
+        "foto": "gulas.jpeg",
     },
     {
         "nama": "Semerai",
         "slug": "semerai",
         "catatan": "Asam, manis, aroma sereh yang khas. Cocok diminum dingin.",
-        "bahan": "",
+        "bahan": "Asam, gula merah, sereh.",
         "manfaat": [
             "Melancarkan pencernaan.",
             "Menyegarkan tubuh.",
             "Membantu melawan radikal bebas.",
         ],
-        "foto": "",
+        "foto": "semerai.jpeg",
     },
 ]
 
@@ -562,6 +562,10 @@ def blok_ketentuan():
 def halaman_beranda(foto, testimoni):
     kartu = "".join(kartu_varian(v, foto) for v in VARIAN if v["foto"])
     daftar = "".join(baris_harga(v) for v in VARIAN)
+    if TANPA_FOTO:
+        teks_varian_lain = ("Varian lain, %s, ada di " % daftar_nama(TANPA_FOTO))
+    else:
+        teks_varian_lain = ("Semua varian dijual dalam botol yang sama, lihat ")
     chat = "".join(
         f"""<figure class="chat-kartu">
   <a class="chat-kartu__tautan" href="/{t['berkas']}" target="_blank" rel="noopener">
@@ -618,7 +622,7 @@ def halaman_beranda(foto, testimoni):
       <p class="kepala-bagian__teks">Semua botol isi {ISI} dan dijual {rupiah(HARGA)}. Foto di bawah adalah botol yang benar-benar kami isi, bukan gambar contoh kemasan.</p>
     </div>
     <div class="varian-grid">{kartu}</div>
-    <p class="setelah-grid">Varian lain, {daftar_nama(TANPA_FOTO)}, ada di <a class="tautan" href="/menu/">daftar lengkap</a>.</p>
+    <p class="setelah-grid">{teks_varian_lain}<a class="tautan" href="/menu/">daftar lengkap</a>.</p>
   </div>
 </section>
 
@@ -734,6 +738,10 @@ def halaman_beranda(foto, testimoni):
 
 
 def halaman_menu(foto):
+    if TANPA_FOTO:
+        catatan_foto = " %d varian belum ada fotonya, tapi tetap tersedia." % JUMLAH_TANPA_FOTO
+    else:
+        catatan_foto = ""
     baris = []
     for v in VARIAN:
         f = foto.get(v["slug"])
@@ -781,14 +789,14 @@ def halaman_menu(foto):
   <div class="wrap">
     <p class="label" data-nomor="01">Varian dan harga</p>
     <h1>{JUMLAH_VARIAN} varian, {rupiah(HARGA)} per botol.</h1>
-    <p>Semua botol isi {ISI}. Pesanan dibuat setelah pembayaran dikonfirmasi, waktu siap diinformasikan lewat WhatsApp. {JUMLAH_TANPA_FOTO} varian belum ada fotonya, tapi tetap tersedia.</p>
+    <p>Semua botol isi {ISI}. Pesanan dibuat setelah pembayaran dikonfirmasi, waktu siap diinformasikan lewat WhatsApp.{catatan_foto}</p>
   </div>
 </div>
 <section class="bagian-varian">
   <div class="wrap">
     <h2 class="sr-only">Daftar varian dan harga</h2>
     <div class="daftar-varian">{''.join(baris)}</div>
-    <p class="sumber">Komposisi yang tertulis di halaman ini diambil dari label botol. Untuk varian lain, tanyakan komposisinya lewat WhatsApp.</p>
+    <p class="sumber">Rasa, komposisi, dan manfaat di halaman ini ditulis dari keterangan pemilik. Kalau ada yang belum tercatat, tanyakan lewat WhatsApp.</p>
   </div>
 </section>
 <section class="alur alur--ringkas" id="cara-order">
