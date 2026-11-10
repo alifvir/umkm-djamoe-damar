@@ -61,7 +61,7 @@ VARIAN = [
         "nama": "Kunyit Tawar",
         "slug": "kunyit-tawar",
         "catatan": "Tanpa gula, untuk yang tidak suka manis.",
-        "bahan": "",
+        "bahan": "Kepala kunyit, garam.",
         "manfaat": ["Meredakan mual, kembung, dan keluhan asam lambung."],
         "foto": "kunyit-tawar.jpeg",
     },
@@ -80,8 +80,8 @@ VARIAN = [
     {
         "nama": "Susu Jahe",
         "slug": "susu-jahe",
-        "catatan": "Lebih lembut di tenggorokan.",
-        "bahan": "",
+        "catatan": "Manis, hangat ke badan, ada sensasi creamy dari susu.",
+        "bahan": "Wedang jahe, susu kental manis.",
         "manfaat": [
             "Menghangatkan tubuh.",
             "Menjaga kesehatan jantung.",
@@ -103,8 +103,8 @@ VARIAN = [
     {
         "nama": "Susut Perut",
         "slug": "susut-perut",
-        "catatan": "Racikan rempah khas Mama Damar.",
-        "bahan": "",
+        "catatan": "Tawar, ada sensasi segar dari jeruk nipis.",
+        "bahan": "Kunyit, jahe, sereh, lengkuas, jeruk nipis.",
         "manfaat": [
             "Membantu melancarkan BAB.",
             "Mengurangi lemak perut.",
