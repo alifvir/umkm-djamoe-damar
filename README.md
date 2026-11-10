@@ -43,16 +43,17 @@ Buka `http://127.0.0.1:8100`.
 - Nama, catatan rasa, komposisi, manfaat, dan foto tiap varian: list `VARIAN` di `build.py`.
 - Foto baru: taruh JPEG di `assets-src/`, isi `foto` pada varian dengan nama berkasnya, lalu build ulang.
 - Varian tanpa foto tetap tampil di halaman menu tanpa gambar.
-- Manfaat: `manfaat` pada varian berupa daftar butir. Kalau daftarnya kosong, baris manfaat tidak dirender. Semua 13 varian sudah terisi.
+- Tiap varian di `/menu/` menampilkan tiga baris berlabel: `Rasa` (dari `catatan`), `Komposisi` (dari `bahan`, dirender "Dibuat dari ..."), dan `Manfaat` (daftar butir dari `manfaat`). Baris komposisi dan manfaat tidak dirender kalau datanya kosong.
 
 ## Yang perlu dikonfirmasi pemilik
 
-1. Harga. Sudah dikonfirmasi pemilik: Rp10.000 per botol 250 ml untuk semua varian.
-2. Alamat. Situs memakai alamat shareloc: `Jl. Pattimura K3 No.17, Talaga, Cikupa, Tangerang Regency, Banten 15560`. Nama area di judul tetap Talaga Bestari. Pastikan ini alamat pengambilan yang benar.
-3. Halal. Sertifikat ID36110017000600324 mencantumkan 10 produk. Dari 13 varian di situs, Manjakani, Susut Perut, Gulas, dan Semerai belum ada di lampiran. Kunyit Asem Majakane ada di lampiran tetapi tidak dijual di situs. Kalau ada sertifikat terbaru, kirim berkasnya.
-4. Foto Manjakani, Empon-Empon, Sirih, Gulas, dan Semerai belum ada. Halaman menu menyebut 5 varian ini belum difoto. Pemilik akan menyusulkan foto.
-5. Manfaat Kunyit Tawar: butir ketiga terpotong di daftar dari pemilik ("keluhan asam..."). Perlu satu kata terakhir, misalnya "asam lambung".
-6. Testimoni memakai 4 tangkapan layar chat yang diberikan. Nama dan nomor kontak sudah dipotong. Sertifikat yang ditampilkan di `/tentang/#legalitas` memuat alamat pemilik, beri tahu kalau bagian itu perlu disamarkan.
+1. Foto Manjakani, Empon-Empon, Sirih, Gulas, dan Semerai belum ada. Pemilik akan menyusulkan.
+2. Komposisi 11 varian masih kosong, jadi baris "Komposisi" baru tampil di Kunyit Asem dan Wedang Jahe. Perlu daftar bahan dari pemilik.
+3. Catatan rasa Manjakani ("Racikan khas Mama Damar") dan Susut Perut ("Racikan rempah khas Mama Damar") belum menggambarkan rasa. Perlu deskripsi rasa dari pemilik.
+4. Foto pelanggan memegang 6 botol (sumber 11.43.36) belum dipasang karena wajah terlihat. Menunggu izin.
+5. Testimoni memakai 4 tangkapan layar chat. Nama dan nomor kontak sudah dipotong. Sertifikat di `/tentang/#legalitas` memuat alamat pemilik, beri tahu kalau perlu disamarkan.
+
+Sudah dikonfirmasi pemilik (10 Nov 2026): harga Rp10.000 per botol 250 ml untuk semua varian, sertifikat halal sudah benar, sebutan area "Talaga Bestari" dengan alamat shareloc tetap.
 
 ## Status
 
