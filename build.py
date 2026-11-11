@@ -427,7 +427,7 @@ def kepala(judul, deskripsi, aktif, kanonikal=""):
                          "postalCode": "15560",
                          "addressCountry": "ID",
                      },
-                     "openingHours": "Mo-Su 06:00-20:00",
+                     "openingHours": SITE["jam_iso"],
                      "priceRange": rupiah(HARGA),
                      "sameAs": [SITE["instagram"], SITE["maps"]],
                  }, ensure_ascii=False)
