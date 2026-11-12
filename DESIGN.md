@@ -46,6 +46,8 @@ Tiga warna inti (krem, hijau, kuning kunyit) plus satu aksen (merah damar). Mera
 
 ## Aturan yang dipegang
 
+- Tagline merek: "Minum jamu praktis, tinggal glek-glek!" Ditaruh sebagai kicker Gloock merah damar di atas judul hero, bukan slogan berulang di tiap bagian.
+- Diferensiasi produk yang dipakai di teks: tanpa bubuk, tanpa pemanis buatan, rempah asli direbus sendiri. Klaim ini dari pemilik; jangan menambah klaim lain (pengawet, organik, khasiat) tanpa konfirmasi.
 - Tidak ada statistik, jumlah pelanggan, atau testimoni karangan. Kutipan diambil dari tangkapan layar chat pelanggan yang diberikan pemilik toko, tanpa foto dan tanpa nama lengkap.
 - Foto produk adalah foto asli botol Djamoe Damar. Logo memakai berkas logo asli yang diberikan.
 - Klaim halal dan merek hanya menyebut yang tercetak di kemasan dan sertifikat: Halal Indonesia, merek terdaftar No. IDM001479970, sejak 2019.

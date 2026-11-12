@@ -390,6 +390,14 @@ label[for] {
   display: block;
 }
 
+.hero__teks > p.hero__tagline {
+  margin: 0 0 12px;
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.9vw, 1.25rem);
+  line-height: 1.3;
+  color: var(--damar);
+}
+
 .hero__teks > p {
   margin-top: 20px;
   color: var(--muted);
@@ -405,7 +413,7 @@ label[for] {
   margin-top: 28px;
 }
 
-.hero__kecil {
+.hero__teks > p.hero__kecil {
   margin-top: 16px;
   font-size: 0.82rem;
   color: var(--muted);
@@ -1411,18 +1419,22 @@ section {
 
   .fakta {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .fakta li {
-    border-bottom: 0;
+    border-bottom: 1px solid var(--line);
     border-left: 1px solid var(--line);
     padding: 18px 20px;
   }
 
-  .fakta li:first-child {
+  .fakta li:nth-child(odd) {
     border-left: 0;
     padding-left: 0;
+  }
+
+  .fakta li:nth-child(n + 3) {
+    border-bottom: 0;
   }
 
   .varian {
@@ -1584,6 +1596,26 @@ section {
 
   .head-cta {
     margin-left: 14px;
+  }
+
+  .fakta {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .fakta li {
+    border-bottom: 0;
+    border-left: 1px solid var(--line);
+    padding: 18px 20px;
+  }
+
+  .fakta li:nth-child(odd) {
+    border-left: 1px solid var(--line);
+    padding-left: 20px;
+  }
+
+  .fakta li:first-child {
+    border-left: 0;
+    padding-left: 0;
   }
 
   .varian-grid {

@@ -578,16 +578,17 @@ def halaman_beranda(foto, testimoni):
 </figure>""" for t in testimoni
     )
     return kepala(
-        "Djamoe Damar, jamu botolan segar dari Talaga Bestari",
-        f"{JUMLAH_VARIAN} varian jamu botolan 250 ml, Rp10.000 per botol. Dibuat segar setelah pesanan masuk, diracik Mama Damar di Talaga Bestari. Ambil di kios atau kirim lewat ojek online.",
+        "Djamoe Damar, jamu botolan segar tanpa bubuk dari Talaga Bestari",
+        f"{JUMLAH_VARIAN} varian jamu botolan 250 ml, Rp10.000 per botol. Tanpa bubuk dan pemanis buatan, dibuat segar setelah pesanan masuk, diracik Mama Damar di Talaga Bestari. Ambil di kios atau kirim lewat ojek online.",
         "beranda",
         "/",
     ) + f"""
 <section class="hero">
   <div class="wrap hero__isi">
     <div class="hero__teks">
-      <h1>Jamu segar dari Talaga Bestari, <span>botol 250 ml.</span></h1>
-      <p>{JUMLAH_VARIAN} varian, {rupiah(HARGA)} per botol. Dibuat segar setelah pesanan masuk, diracik {escape(SITE["pemilik"])}, lalu disegel. Ambil di kios Talaga Bestari atau kirim lewat ojek online.</p>
+      <p class="hero__tagline">Minum jamu praktis, tinggal glek-glek!</p>
+      <h1>Jamu segar dari Talaga Bestari, <span>tanpa bubuk dan pemanis buatan.</span></h1>
+      <p>{JUMLAH_VARIAN} varian, {rupiah(HARGA)} per botol {ISI}. Rempah asli direbus dan diracik {escape(SITE["pemilik"])} setelah pesanan masuk, lalu disegel. Ambil di kios Talaga Bestari atau kirim lewat ojek online.</p>
       <div class="hero__aksi">
         {tombol_order("tombol", "Pesan lewat WhatsApp")}
         <a class="tombol tombol--outline" href="/menu/">Lihat {JUMLAH_VARIAN} varian</a>
@@ -606,6 +607,7 @@ def halaman_beranda(foto, testimoni):
 
 <div class="wrap">
   <ul class="fakta">
+    <li><strong>Tanpa bubuk, tanpa pemanis buatan</strong><span>Rempah asli, direbus sendiri oleh {escape(SITE["pemilik"])} di Talaga Bestari.</span></li>
     <li><strong>Halal Indonesia</strong><span>Sertifikat No. {escape(SITE["halal_nomor"])}, terbit {escape(SITE["halal_terbit"])}.</span></li>
     <li><strong>Merek terdaftar</strong><span>No. {escape(SITE["merek"])}, terdaftar di DJKI sejak Desember 2025.</span></li>
     <li><strong>Sejak {SITE["sejak"]}</strong><span>Melayani pesanan jamu botolan di Talaga Bestari.</span></li>
@@ -631,7 +633,7 @@ def halaman_beranda(foto, testimoni):
     <div>
       <p class="label label--terang" data-nomor="02">Proses</p>
       <h2>Dibuat segar setiap hari, setelah pesanan masuk.</h2>
-      <p class="pita__teks">Jamu diracik {escape(SITE["pemilik"])} di Talaga Bestari. Tidak ada stok lama: pesanan baru dibuat setelah masuk dan dikonfirmasi, lalu dimasak, dibotolkan, dan disegel.</p>
+      <p class="pita__teks">Rempah asli direbus sendiri, bukan bubuk instan, dan tanpa pemanis buatan. Jamu diracik {escape(SITE["pemilik"])} di Talaga Bestari. Tidak ada stok lama: pesanan baru dibuat setelah masuk dan dikonfirmasi, lalu dimasak, dibotolkan, dan disegel.</p>
       <dl class="pita__daftar">
         <div><dt>Dibuat sesuai pesanan</dt><dd>Jamu baru diracik setelah pesanan dan pembayaran dikonfirmasi.</dd></div>
         <div><dt>Botol tersegel</dt><dd>Setiap botol ditutup rapat. Kalau segel rusak saat diterima, jangan diminum.</dd></div>
