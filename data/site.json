@@ -7,7 +7,11 @@
   "sejak": 2019,
   "wa": "6283890790145",
   "wa_pesan": "Halo Djamoe Damar, saya mau pesan jamu. Boleh info varian dan waktu siapnya?",
-  "alamat": "Jl. Pattimura K3 No.17, Talaga, Cikupa, Tangerang Regency, Banten 15560",
+  "alamat": "Jl. Pattimura Talaga Bestari K3/17, Sindangjaya, Tangerang, 15560",
+  "alamat_resmi": "Jl. Pattimura K3 No.17, Talaga, Cikupa, Tangerang Regency, Banten 15560",
+  "alamat_lokalitas": "Cikupa",
+  "alamat_region": "Banten",
+  "alamat_pos": "15560",
   "alamat_pendek": "Talaga Bestari",
   "maps": "https://maps.app.goo.gl/UbV8anJ8Fz34RNga9",
   "instagram": "https://www.instagram.com/djamoe.damar",
@@ -35,6 +39,6 @@
   ],
   "qris": true,
   "url": "https://djamoe-damar.pages.dev",
-  "alamat_1": "Jl. Pattimura K3 No.17, Talaga",
-  "alamat_2": "Cikupa, Tangerang Regency, Banten 15560"
+  "alamat_1": "Jl. Pattimura Talaga Bestari K3/17",
+  "alamat_2": "Sindangjaya, Tangerang, 15560"
 }

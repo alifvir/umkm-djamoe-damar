@@ -373,11 +373,15 @@ def nomor_tampil():
 
 
 def alamat_html():
+    """Alamat versi tampil (mudah dikenali warga sekitar), dua baris.
+
+    Alamat resmi untuk Maps dan data terstruktur ada di SITE["alamat_resmi"].
+    """
     baris = [SITE.get("alamat_1"), SITE.get("alamat_2")]
     baris = [escape(b) for b in baris if b]
     if baris:
         return "<br>".join(baris)
-    return escape(SITE.get("alamat", ""))
+    return escape(SITE.get("alamat_resmi", ""))
 
 
 def tombol_order(kelas="tombol", teks="Pesan lewat WhatsApp", pesan=None):
@@ -421,10 +425,10 @@ def kepala(judul, deskripsi, aktif, kanonikal=""):
                      "telephone": "+" + SITE["wa"],
                      "address": {
                          "@type": "PostalAddress",
-                         "streetAddress": SITE["alamat"],
-                         "addressLocality": "Cikupa",
-                         "addressRegion": "Banten",
-                         "postalCode": "15560",
+                         "streetAddress": SITE["alamat_resmi"],
+                         "addressLocality": SITE["alamat_lokalitas"],
+                         "addressRegion": SITE["alamat_region"],
+                         "postalCode": SITE["alamat_pos"],
                          "addressCountry": "ID",
                      },
                      "openingHours": SITE["jam_iso"],

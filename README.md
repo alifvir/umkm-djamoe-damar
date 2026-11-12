@@ -1,6 +1,6 @@
 # Djamoe Damar, situs statis
 
-Situs profil dan daftar harga jamu botolan Djamoe Damar, Talaga, Cikupa. Statis murni: tanpa database, tanpa server, tanpa login. Semua pesanan tetap lewat WhatsApp.
+Situs profil dan daftar harga jamu botolan Djamoe Damar, Talaga Bestari, Sindangjaya (Cikupa). Statis murni: tanpa database, tanpa server, tanpa login. Semua pesanan tetap lewat WhatsApp.
 
 ## Isi
 
@@ -52,7 +52,9 @@ Buka `http://127.0.0.1:8100`.
 4. Foto pelanggan memegang 6 botol (sumber 11.43.36) belum dipasang karena wajah terlihat. Menunggu izin.
 5. Testimoni memakai 4 tangkapan layar chat. Nama dan nomor kontak sudah dipotong. Sertifikat di `/tentang/#legalitas` memuat alamat pemilik, beri tahu kalau perlu disamarkan.
 
-Sudah dikonfirmasi pemilik (10 Nov 2026): harga Rp10.000 per botol 250 ml untuk semua varian, sertifikat halal sudah benar, sebutan area "Talaga Bestari" dengan alamat shareloc tetap.
+Sudah dikonfirmasi pemilik (10 Nov 2026): harga Rp10.000 per botol 250 ml untuk semua varian, sertifikat halal sudah benar, sebutan area "Talaga Bestari".
+
+Alamat dipisah dua (12 Nov 2026): `alamat_1`/`alamat_2` untuk tampilan ("Jl. Pattimura Talaga Bestari K3/17" + "Sindangjaya, Tangerang, 15560") supaya warga sekitar mudah mengenali, sedangkan `alamat_resmi` ("Jl. Pattimura K3 No.17, Talaga, Cikupa, Tangerang Regency, Banten 15560") dipakai untuk JSON-LD LocalBusiness dan tautan Google Maps. Jangan samakan keduanya.
 
 ## Status
 
